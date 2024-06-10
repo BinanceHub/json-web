@@ -10,7 +10,7 @@ app.use((req, res, next) => {
 });
 app.get("/", (req, res) => {
   res.json({
-    url: "https://google.com",
+    url: "https://binancehub.vercel.app/",
   });
 });
 

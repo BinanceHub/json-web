@@ -1,5 +1,6 @@
 const express = require("express");
 const fs = require("fs");
+const { url } = require("inspector");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -8,9 +9,8 @@ app.use((req, res, next) => {
   next();
 });
 app.get("/", (req, res) => {
-  fs.readFile(__dirname + "/" + "links.json", "utf-8", (err, data) => {
-    console.log(data);
-    res.json(data);
+  res.json({
+    url: "https://google.com",
   });
 });
 
